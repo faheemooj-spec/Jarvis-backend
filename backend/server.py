@@ -74,4 +74,4 @@ class Handler(BaseHTTPRequestHandler):
 
 print("JARVIS BACKEND READY")
 
-HTTPServer(("0.0.0.0", 8090), Handler).serve_forever()
+HTTPServer(("0.0.0.0", int(os.environ.get("PORT", 8090))), Handler).serve_forever()
